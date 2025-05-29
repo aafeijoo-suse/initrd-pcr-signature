@@ -2,7 +2,7 @@
 set -euo pipefail
 
 if [ -e "/run/systemd/pcrlock.json" ] || [ -e "/run/systemd/tpm2-pcr-signature.json" ]; then
-    echo "pcr-signature: signature file already present"
+    echo "initrd-pcr-signature: signature file already present"
     exit 0
 fi
 
