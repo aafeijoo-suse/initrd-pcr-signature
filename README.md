@@ -1,2 +1,2 @@
-# dracut-pcr-signature
-Dracut module to import PCR signatures
+# initrd-pcr-signature
+Import PCR signatures from the initrd

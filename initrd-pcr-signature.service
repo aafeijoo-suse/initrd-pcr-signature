@@ -6,11 +6,12 @@ Wants=cryptsetup-pre.target
 Before=cryptsetup-pre.target
 
 RequiresMountsFor=/boot/efi
+ConditionPathExists=/etc/initrd-release
 
 [Service]
 Type=oneshot
 RemainAfterExit=true
-ExecStart=/usr/bin/pcr-signature.sh
+ExecStart=/usr/libexec/initrd-pcr-signature
 
 [Install]
 WantedBy=cryptsetup.target
